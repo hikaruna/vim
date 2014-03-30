@@ -15,6 +15,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'w0ng/vim-hybrid' "http://cocopon.me/blog/?p=841 で紹介されてたカラー
+NeoBundle 'vim-coffee-script'
+NeoBundle 'rails.vim'
+NeoBundle 'matchit.zip' "HTMLのタグから対応するグへジャンプする
 
 " Required:
 filetype plugin indent on
