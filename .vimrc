@@ -14,6 +14,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'w0ng/vim-hybrid' "http://cocopon.me/blog/?p=841 で紹介されてたカラー
 
 " Required:
 filetype plugin indent on
@@ -109,6 +110,8 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "neocompleteを有効化 ここまで
+
+colorscheme hybrid
 
 syntax on
 set number
