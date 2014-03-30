@@ -2,3 +2,5 @@
 .netrwhist
 bundle/*
 !bundle/neobundle.vim
+tmp
+backup

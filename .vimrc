@@ -109,3 +109,14 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "neocompleteを有効化 ここまで
+
+syntax on
+set number
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
+set ruler "何行目の何列目かを表示
+set hlsearch "検索結果をハイライトする
+set nowrapscan "下まで検索したら最初に戻らない
+set directory=~/.vim/tmp "スワップファイルを作成するディレクトリを指定
+set backup "バックアップファイルを作成します
+set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
