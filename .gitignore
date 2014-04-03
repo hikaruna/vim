@@ -2,5 +2,7 @@
 .netrwhist
 bundle/*
 !bundle/neobundle.vim
-tmp
-backup
+tmp/*
+!tmp/.gitkeep
+backup/*
+!backup/.gitkeep
