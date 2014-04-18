@@ -114,6 +114,7 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "neocompleteを有効化 ここまで
 
+set t_Co=256
 colorscheme hybrid
 
 syntax on
