@@ -126,3 +126,4 @@ set nowrapscan "下まで検索したら最初に戻らない
 set directory=~/.vim/tmp "スワップファイルを作成するディレクトリを指定
 set backup "バックアップファイルを作成します
 set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
+set clipboard=unnamed,autoselect "ヤンクした時に自動でクリップボードにコピー
