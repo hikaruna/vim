@@ -168,4 +168,6 @@ set backup "バックアップファイルを作成します
 set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
 set ic "大文字小文字を区別せず検索する
 set clipboard=unnamed "ヤンクした時に自動でクリップボードにコピー(autoselectを指定するとvモードの置換連続ペーストができない)
-nmap <Esc><Esc><Esc> :nohlsearch<CR><Esc> "Escを連打したとき検索結果のハイライトを消す
+
+"Escを連打したとき検索結果のハイライトを消す
+nmap <Esc><Esc><Esc> :nohlsearch<CR><Esc>
