@@ -16,8 +16,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'w0ng/vim-hybrid' "http://cocopon.me/blog/?p=841 で紹介されてたカラー
 NeoBundle 'vim-coffee-script'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rails.vim'
 NeoBundle 'matchit.zip' "HTMLのタグから対応するグへジャンプする
+NeoBundle 'tpope/vim-endwise' "rubyのendを自動挿入
+
 
 " Required:
 filetype plugin indent on
@@ -114,10 +117,46 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "neocompleteを有効化 ここまで
 
+"vim-zuickrunの有効化
+let g:quickrun_config = {}
+let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
+
+set t_ut=
 set t_Co=256
 colorscheme hybrid
 
+" ターミナルタイプによるカラー設定
+if &term =~ "xterm-256color" || "screen-256color"
+  " 256色
+  set t_Co=256
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-debian" || &term =~ "xterm-xfree86"
+  set t_Co=16
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-color"
+  set t_Co=8
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+endif
+
+" vモードの置換連続ペースト用
+function! Put_text_without_override_register()
+  let line_len = strlen(getline('.'))
+  execute "normal! `>"
+  let col_loc = col('.')
+  execute 'normal! gv"_x'
+  if line_len == col_loc
+    execute 'normal! p'
+  else
+    execute 'normal! P'
+  endif
+endfunction
+xnoremap <silent> p :call Put_text_without_override_register()<CR>
+
 syntax on
+set autoindent
 set number
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
@@ -127,4 +166,6 @@ set nowrapscan "下まで検索したら最初に戻らない
 set directory=~/.vim/tmp "スワップファイルを作成するディレクトリを指定
 set backup "バックアップファイルを作成します
 set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
-set clipboard=unnamed,autoselect "ヤンクした時に自動でクリップボードにコピー
+set ic "大文字小文字を区別せず検索する
+set clipboard=unnamed "ヤンクした時に自動でクリップボードにコピー(autoselectを指定するとvモードの置換連続ペーストができない)
+nmap <Esc><Esc><Esc> :nohlsearch<CR><Esc> "Escを連打したとき検索結果のハイライトを消す
