@@ -20,6 +20,8 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rails.vim'
 NeoBundle 'matchit.zip' "HTMLのタグから対応するグへジャンプする
 NeoBundle 'tpope/vim-endwise' "rubyのendを自動挿入
+NeoBundle 'kana/vim-textobj-user' "textobj-xxx系のコア
+NeoBundle 'kana/vim-textobj-indent' "インデント系の言語でテキストオブジェクトを有効にする vii
 
 
 " Required:
