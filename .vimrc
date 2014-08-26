@@ -23,7 +23,7 @@ NeoBundle 'tpope/vim-endwise' "rubyのendを自動挿入
 NeoBundle 'tpope/vim-haml' "Vim runtime files for Haml, Sass, and SCSS
 NeoBundle 'kana/vim-textobj-user' "textobj-xxx系のコア
 NeoBundle 'kana/vim-textobj-indent' "インデント系の言語でテキストオブジェクトを有効にする vii
-NeoBundle 'tpope/vim-surround' "選択中のテキストを括弧やダブルクォートでくくれる viw S<b> とやると <b>xxx</b> sdt とやると xxx
+NeoBundle 'tpope/vim-surround' "選択中のテキストを括弧やダブルクォートでくくれる viw S<b> とやると <b>xxx</b> dst とやると xxx
 
 
 " Required:
