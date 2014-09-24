@@ -172,6 +172,7 @@ set directory=~/.vim/tmp "スワップファイルを作成するディレクト
 set backup "バックアップファイルを作成します
 set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
 set ic "大文字小文字を区別せず検索する
+set bs=2 "バックスペースで挿入した場所以前も消せるようにする
 set clipboard=unnamed "ヤンクした時に自動でクリップボードにコピー(autoselectを指定するとvモードの置換連続ペーストができない)
 
 "Escを連打したとき検索結果のハイライトを消す
