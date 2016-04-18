@@ -21,10 +21,22 @@ NeoBundle 'rails.vim'
 NeoBundle 'matchit.zip' "HTMLのタグから対応するグへジャンプする
 NeoBundle 'tpope/vim-endwise' "rubyのendを自動挿入
 NeoBundle 'tpope/vim-haml' "Vim runtime files for Haml, Sass, and SCSS
+NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'kana/vim-textobj-user' "textobj-xxx系のコア
 NeoBundle 'kana/vim-textobj-indent' "インデント系の言語でテキストオブジェクトを有効にする vii
 NeoBundle 'tpope/vim-surround' "選択中のテキストを括弧やダブルクォートでくくれる viw S<b> とやると <b>xxx</b> dst とやると xxx
 NeoBundle 'nathanaelkane/vim-indent-guides' "インデントに模様
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm' " :PrevimOpen でブラウザに表示
+NeoBundle 'tyru/open-browser.vim' "previmで使用
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'cakebaker/scss-syntax.vim' " Sassシンタックス
+NeoBundle 'digitaltoad/vim-jade' " Jadeシンタックス
+NeoBundle 'othree/yajs.vim' " ES6 シンタックス
+NeoBundle 'wavded/vim-stylus' " Stylシンタックス
+NeoBundle 'evidens/vim-twig' " twigシンタックス
+NeoBundle 'vim-scripts/diffchar.vim' "単語単位のdiff F7で起動
+NeoBundle 'itchyny/lightline.vim'
 
 
 " Required:
@@ -130,6 +142,8 @@ set t_ut=
 set t_Co=256
 colorscheme hybrid
 
+let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
+
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"
   " 256色
@@ -177,3 +191,5 @@ set clipboard=unnamed "ヤンクした時に自動でクリップボードにコ
 
 "Escを連打したとき検索結果のハイライトを消す
 nmap <Esc><Esc><Esc> :nohlsearch<CR><Esc>
+"tabnew と打つのは疲れるのでviにエイリアス
+ca vi tabnew
