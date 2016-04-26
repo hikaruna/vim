@@ -138,9 +138,10 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
 
-set t_ut=
-set t_Co=256
+set background=dark
+let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
+syntax on
 
 let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
 
