@@ -37,6 +37,8 @@ NeoBundle 'wavded/vim-stylus' " Stylシンタックス
 NeoBundle 'evidens/vim-twig' " twigシンタックス
 NeoBundle 'vim-scripts/diffchar.vim' "単語単位のdiff F7で起動
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'jbgutierrez/vim-babel' "es6 convert
+NeoBundle 'mattn/webapi-vim' "es6 convert
 
 
 " Required:
@@ -137,6 +139,9 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "vim-zuickrunの有効化
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
+
+" es6 babelコンバートのショートカット
+nnoremap <C-\> :Babel vert<CR>
 
 set background=dark
 let g:hybrid_use_iTerm_colors = 1
