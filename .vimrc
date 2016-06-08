@@ -15,6 +15,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'w0ng/vim-hybrid' "http://cocopon.me/blog/?p=841 で紹介されてたカラー
+NeoBundle 'tomasr/molokai' " 背景が半透明でも見やすいと噂のカラー
 NeoBundle 'vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rails.vim'
@@ -39,6 +40,7 @@ NeoBundle 'vim-scripts/diffchar.vim' "単語単位のdiff F7で起動
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'jbgutierrez/vim-babel' "es6 convert
 NeoBundle 'mattn/webapi-vim' "es6 convert
+NeoBundle 'miyakogi/seiya.vim' " vimの背景色を透明な感じにするらしい
 
 
 " Required:
@@ -143,9 +145,9 @@ let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
 " es6 babelコンバートのショートカット
 nnoremap <C-\> :Babel vert<CR>
 
-set background=dark
+let g:seiya_auto_enable=1 " 背景の透過をするプラグインを有効化
 let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
+colorscheme molokai
 syntax on
 
 let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
