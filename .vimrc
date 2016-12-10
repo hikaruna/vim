@@ -16,6 +16,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'w0ng/vim-hybrid' "http://cocopon.me/blog/?p=841 で紹介されてたカラー
 NeoBundle 'tomasr/molokai' " 背景が半透明でも見やすいと噂のカラー
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'rails.vim'
@@ -139,16 +140,21 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "neocompleteを有効化 ここまで
 
 "vim-zuickrunの有効化
-let g:quickrun_config = {}
-let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
+let g:quickrun_config = { '_': {} }
+let g:quickrun_config['_']['outputter/buffer/split'] = ':botright' " 一番下にウィンドウを分割させて出力
+let g:quickrun_config['_']['outputter/buffer/close_on_empty'] = 1 " 出力がなかった場合に出力バッファを自動的に閉じる
+" let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
+nnoremap <C-\> :QuickRun<CR>
 
 " es6 babelコンバートのショートカット
-nnoremap <C-\> :Babel vert<CR>
+"nnoremap <C-\> :Babel vert<CR>
 
 let g:seiya_auto_enable=1 " 背景の透過をするプラグインを有効化
-let g:hybrid_use_iTerm_colors = 1
-colorscheme molokai
-syntax on
+"let g:hybrid_use_iTerm_colors = 1
+"colorscheme molokai
+"colorscheme hybrid
+"colorscheme elflord
+colorscheme solarized
 
 let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
 
@@ -167,6 +173,15 @@ elseif &term =~ "xterm-color"
   set t_Sf=[3%dm
   set t_Sb=[4%dm
 endif
+
+" Powerline " 動かない 参考 http://qiita.com/tkhr/items/8cc17c02dea1803be9c6
+" 動かないから封印
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+"set laststatus=2
+"set showtabline=2
+"set noshowmode
 
 " vモードの置換連続ペースト用
 function! Put_text_without_override_register()
@@ -195,7 +210,7 @@ set backup "バックアップファイルを作成します
 set backupdir=~/.vim/backup "バックアップファイルを保管するディレクトリを指定
 set ic "大文字小文字を区別せず検索する
 set bs=2 "バックスペースで挿入した場所以前も消せるようにする
-set clipboard=unnamed "ヤンクした時に自動でクリップボードにコピー(autoselectを指定するとvモードの置換連続ペーストができない)
+set clipboard+=unnamed "ヤンクした時に自動でクリップボードにコピー(autoselectを指定するとvモードの置換連続ペーストができない)
 
 "Escを連打したとき検索結果のハイライトを消す
 nmap <Esc><Esc><Esc> :nohlsearch<CR><Esc>
