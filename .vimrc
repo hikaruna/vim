@@ -141,9 +141,11 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 "vim-zuickrunの有効化
 let g:quickrun_config = { '_': {} }
-let g:quickrun_config['_']['outputter/buffer/split'] = ':botright' " 一番下にウィンドウを分割させて出力
+let g:quickrun_config['_']['outputter/buffer/split'] = ':botright 8sp' " 一番下にウィンドウを分割させて出力
 let g:quickrun_config['_']['outputter/buffer/close_on_empty'] = 1 " 出力がなかった場合に出力バッファを自動的に閉じる
 " let g:quickrun_config['coffee'] = {'command': 'coffee', 'exec': ['%c -cbp %s']}
+let g:quickrun_config['json'] = {'command': 'jq', 'exec': ['%c . %s']}
+let g:quickrun_config['html'] = {'command': 'w3m', 'exec': ['%c %s']}
 nnoremap <C-\> :QuickRun<CR>
 
 " es6 babelコンバートのショートカット
