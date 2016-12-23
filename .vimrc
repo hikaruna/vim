@@ -153,10 +153,16 @@ nnoremap <C-\> :QuickRun<CR>
 
 let g:seiya_auto_enable=1 " 背景の透過をするプラグインを有効化
 "let g:hybrid_use_iTerm_colors = 1
-"colorscheme molokai
 "colorscheme hybrid
 "colorscheme elflord
-colorscheme solarized
+"colorscheme solarized
+
+"molokai===
+colorscheme molokai
+let g:molokai_original = 1
+set background=light
+let g:rehash256 = 1
+"===molokai
 
 let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
 
