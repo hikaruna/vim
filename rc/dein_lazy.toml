@@ -1,0 +1,68 @@
+# インサートモードに入ったら読み込む
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+
+[[plugins]]
+repo = 'vim-coffee-script'
+on_ft = ['coffeescript']
+
+[[plugins]]
+repo = 'tpope/vim-endwise' #rubyのendを自動挿入
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'tpope/vim-haml' #Vim runtime files for Haml, Sass, and SCSS
+on_ft = ['haml']
+
+[[plugins]]
+repo = 'toyamarinyon/vim-swift'
+on_ft = ['swift']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
+repo = 'matchit.zip' #HTMLのタグから対応するグへジャンプする
+on_ft = ['html']
+
+[[plugins]]
+repo = 'kannokanno/previm' # :PrevimOpen でブラウザに表示
+on_ft = ['markdown', 'html']
+
+[[plugins]]
+repo = 'tyru/open-browser.vim' #previmで使用
+on_ft = ['markdown', 'html']
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim' # Sassシンタックス
+on_ft = ['sass']
+
+[[plugins]]
+repo = 'digitaltoad/vim-jade' # Jadeシンタックス
+on_ft = ['jade']
+
+[[plugins]]
+repo = 'othree/yajs.vim' # ES6 シンタックス
+on_ft = ['es6']
+
+[[plugins]]
+repo = 'jbgutierrez/vim-babel' #es6 convert
+on_ft = ['es6']
+
+[[plugins]]
+repo = 'mattn/webapi-vim' #es6 convert
+on_ft = ['es6']
+
+[[plugins]]
+repo = 'wavded/vim-stylus' # Stylシンタックス
+on_ft = ['styl']
+
+[[plugins]]
+repo = 'evidens/vim-twig' # twigシンタックス
+on_ft = ['twig']

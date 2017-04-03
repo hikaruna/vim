@@ -1,0 +1,38 @@
+# 基本は github.com のレポジトリーを指定するだけ
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid' # http://cocopon.me/blog/?p=841 で紹介されてたカラー
+
+[[plugins]]
+repo = 'tomasr/molokai' # 背景が半透明でも見やすいと噂のカラー
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+[[plugins]]
+
+repo = 'rails.vim'
+repo = 'vim-scripts/diffchar.vim' #単語単位のdiff F7で起動
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'miyakogi/seiya.vim' # vimの背景色を透明な感じにするらしい
+
+[[plugins]]
+repo = 'kana/vim-textobj-user' #textobj-xxx系のコア
+
+[[plugins]]
+repo = 'kana/vim-textobj-indent' #インデント系の言語でテキストオブジェクトを有効にする vii
+
+[[plugins]]
+repo = 'tpope/vim-surround' #選択中のテキストを括弧やダブルクォートでくくれる viw S<b> とやると <b>xxx</b> dst とやると xxx
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides' #インデントに模様
+
