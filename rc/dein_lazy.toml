@@ -24,6 +24,10 @@ repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
 
 [[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby', 'haml']
+
+[[plugins]]
 repo = 'matchit.zip' #HTMLのタグから対応するグへジャンプする
 on_ft = ['html']
 
