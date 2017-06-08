@@ -4,7 +4,7 @@ repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
 [[plugins]]
-repo = 'vim-coffee-script'
+repo = 'vim-scripts/vim-coffee-script'
 on_ft = ['coffeescript']
 
 [[plugins]]
@@ -28,7 +28,7 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby', 'haml']
 
 [[plugins]]
-repo = 'matchit.zip' #HTMLのタグから対応するグへジャンプする
+repo = 'vim-scripts/matchit.zip' #HTMLのタグから対応するグへジャンプする
 on_ft = ['html']
 
 [[plugins]]
