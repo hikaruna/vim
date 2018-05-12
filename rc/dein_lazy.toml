@@ -4,6 +4,14 @@ repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
 [[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+[[plugins]]
+repo = 'ryym/vim-riot'
+on_ft = ['riot']
+
+[[plugins]]
 repo = 'vim-scripts/vim-coffee-script'
 on_ft = ['coffeescript']
 
