@@ -58,12 +58,14 @@ let g:seiya_auto_enable=1 " 背景の透過をするプラグインを有効化
 "colorscheme elflord
 "colorscheme solarized
 
-"molokai===
-colorscheme molokai
-let g:molokai_original = 1
-set background=light
-let g:rehash256 = 1
-"===molokai
+""molokai===
+"colorscheme molokai
+"let g:molokai_original = 1
+"set background=light
+"let g:rehash256 = 1
+""===molokai
+
+colorscheme elflord " https://qiita.com/ryoff/items/134b758afa8cc45a43d3 紹介の半透明でも見やすい組み込みテーマ
 
 let g:vim_markdown_folding_disabled=1 " 'plasticboy/vim-markdown' の自動折り畳みをOFF
 
@@ -83,14 +85,6 @@ elseif &term =~ "xterm-color"
   set t_Sb=[4%dm
 endif
 
-" Powerline " 動かない 参考 http://qiita.com/tkhr/items/8cc17c02dea1803be9c6
-" 動かないから封印
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-"set laststatus=2
-"set showtabline=2
-"set noshowmode
 
 " vモードの置換連続ペースト用
 function! Put_text_without_override_register()
